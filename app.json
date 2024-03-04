@@ -4,7 +4,7 @@
     "slug": "MoodPad",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/Icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,12 +19,24 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/Icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.rawrawr.MoodPad"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/Icon.png"
+    },
+    "fonts": {
+      "dancing-script": "./assets/fontss/Dancing_Script/DancingScript-VariableFont_wght.ttf",
+      "madimi-one": "./assets/fontss/Madimi_One/MadimiOne-Regular.ttf",
+      "playfair-display": "./assets/fontss/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf",
+      "quicksand": "./assets/fontss/Quicksand/Quicksand-VariableFont_wght.ttf"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0c5205ba-0b60-4867-a105-6e0503997ecb"
+      }
     }
   }
 }

@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LandingPage from './screen/LandingPage';
+import HomePage from './screen/HomePage';
+import WorkPage from './screen/WorkPage';
+import PersonalPage from './screen/PersonalPage';
+import IdeasPage from './screen/IdeasPage';
+import GoalsPage from './screen/GoalsPage';
+import InspirationPage from './screen/InspirationPage';
+import DailyGoalsPage from './screen/DailyGoalsPage';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="MoodPad">
+        <Stack.Screen name="MoodPad" component={LandingPage} />
+        <Stack.Screen name="Home" component={HomePage} />
+        <Stack.Screen name="Work" component={WorkPage} />
+        <Stack.Screen name="Personal" component={PersonalPage} />
+        <Stack.Screen name="Ideas" component={IdeasPage} />
+        <Stack.Screen name="Long-Term Goals" component={GoalsPage} />
+        <Stack.Screen name="Inspiration" component={InspirationPage} />
+        <Stack.Screen name="Daily Goals" component={DailyGoalsPage} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
